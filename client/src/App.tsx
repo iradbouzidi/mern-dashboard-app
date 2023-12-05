@@ -60,7 +60,7 @@ function App() {
 
       if (profileObj) {
         const response = await fetch(
-          `${process.env.REACT_APP_DEV_BACKEND_URL}/api/v1/users`,
+          `${process.env.REACT_APP_PROD_BACKEND_URL}/api/v1/users`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -132,7 +132,7 @@ function App() {
       <RefineSnackbarProvider>
         <Refine
           dataProvider={dataProvider(
-            `${process.env.REACT_APP_DEV_BACKEND_URL}/api/v1`
+            `${process.env.REACT_APP_PROD_BACKEND_URL}/api/v1`
           )}
           notificationProvider={notificationProvider}
           ReadyPage={ReadyPage}
